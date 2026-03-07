@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Meta Tags (will be updated dynamically by useSEO composable) -->
+    <meta name="description" content="Kelola warung dan toko Anda dengan mudah menggunakan sistem kasir modern. Mulai dari Rp 149rb/bulan dengan trial gratis 14 hari.">
+    <meta name="keywords" content="sistem kasir, warung, toko, UMKM, inventori, laporan penjualan, aplikasi kasir, sistem toko">
+    <meta name="author" content="Warungin">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563EB">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Warungin - Sistem Kasir Modern untuk UMKM">
+    <meta property="og:description" content="Kelola warung dan toko Anda dengan mudah menggunakan sistem kasir modern. Mulai dari Rp 149rb/bulan dengan trial gratis 14 hari.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Warungin">
+    <meta property="og:locale" content="id_ID">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Warungin - Sistem Kasir Modern untuk UMKM">
+    <meta name="twitter:description" content="Kelola warung dan toko Anda dengan mudah menggunakan sistem kasir modern. Mulai dari Rp 149rb/bulan dengan trial gratis 14 hari.">
+    
+    <!-- Prevent caching for WebView compatibility (only for HTML) -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <title>Warungin - Sistem Kasir Modern untuk UMKM</title>
+    
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Google tag & IronSource SDK: loaded only in production -->
+    <script>
+      if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+        var gs = document.createElement('script');
+        gs.async = true;
+        gs.src = 'https://www.googletagmanager.com/gtag/js?id=G-EJJJLD8YNQ';
+        document.head.appendChild(gs);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EJJJLD8YNQ', {
+          'page_path': window.location.pathname + window.location.search
+        });
+        var is = document.createElement('script');
+        is.async = true;
+        is.src = 'https://s3.amazonaws.com/ads.ironsrc.com/js/ironsource-sdk.min.js';
+        document.head.appendChild(is);
+      }
+    </script>
+    
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        visibility: visible;
+      }
+      #app {
+        min-height: 100vh;
+        width: 100%;
+        display: block;
+      }
+      
+      /* Splash Screen */
+      #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.3s ease-out;
+      }
+      #splash-screen.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .splash-logo {
+        width: 120px;
+        height: 120px;
+        background: white;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        font-weight: bold;
+        color: #2563EB;
+        margin-bottom: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+      .splash-text {
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .splash-subtitle {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+      }
+      .splash-loader {
+        margin-top: 32px;
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top-color: white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <div class="splash-logo">W</div>
+      <div class="splash-text">Warungin</div>
+      <div class="splash-subtitle">Sistem Kasir Modern untuk UMKM</div>
+      <div class="splash-loader"></div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      function hideSplash() {
+        var splash = document.getElementById('splash-screen');
+        if (splash && !splash.classList.contains('hidden')) {
+          splash.classList.add('hidden');
+          setTimeout(function() { if (splash.parentNode) splash.parentNode.removeChild(splash); }, 300);
+        }
+      }
+      if (document.readyState === 'complete') {
+        setTimeout(hideSplash, 500);
+      } else {
+        window.addEventListener('load', function() {
+          setTimeout(hideSplash, 500);
+        });
+      }
+      setTimeout(hideSplash, 2000);
+    </script>
+  </body>
+</html>
+

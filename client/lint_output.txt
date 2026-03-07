@@ -1,0 +1,283 @@
+
+> warungin-client@1.1.0 lint
+> eslint . --fix
+
+
+F:\Backup W11\Project\New-Warungin\client\cypress.config.ts
+  6:25  warning  'on' is defined but never used. Allowed unused args must match /^_/u      @typescript-eslint/no-unused-vars
+  6:29  warning  'config' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ExportButton.vue
+  53:7  warning  'props' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ImageCropperModal.vue
+  87:10  warning  'Teleport' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\MidtransPaymentModal.vue
+  223:28  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\NotificationDropdown.vue
+  72:36  warning  'onUnmounted' is defined but never used      @typescript-eslint/no-unused-vars
+  77:7   warning  'router' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  93:38  error    Unexpected side effect in computed function  vue/no-side-effects-in-computed-properties
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ReceiptPrinter.vue
+  215:10  warning  'Teleport' is defined but never used       @typescript-eslint/no-unused-vars
+  283:7   warning  'emit' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  471:14  warning  'err' is defined but never used            @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ReceiptTemplateManager.vue
+  365:10  warning  'Teleport' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ReportExportModal.vue
+  306:23  warning  'getPeriodLabel' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\SubscriptionReceiptTemplateManager.vue
+  356:10  warning  'Teleport' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\TenantSelector.vue
+  73:7  warning  'props' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ToastContainer.vue
+  28:27  warning  'Toast' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\UserEditModal.vue
+  562:20  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\kitchen\KitchenSettingsModal.vue
+  60:7  warning  'props' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ui\BaseInput.vue
+  50:10  warning  'computed' is defined but never used        @typescript-eslint/no-unused-vars
+  68:7   warning  'props' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ui\table\BaseTableActions.vue
+  39:7  warning  'props' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ui\table\BaseTableCell.vue
+  15:7  warning  'props' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ui\table\BaseTableHead.vue
+  58:7  warning  'props' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\components\ui\table\BaseTableRow.vue
+  18:7  warning  'props' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\composables\useIronSource.ts
+    6:15  warning  'onMounted' is defined but never used          @typescript-eslint/no-unused-vars
+    8:11  warning  'IronSourceAd' is defined but never used       @typescript-eslint/no-unused-vars
+  255:11  warning  'adClosed' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\composables\useTenantCheck.ts
+  7:9  warning  'router' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\layouts\AppLayout.vue
+  309:5   error    Parsing error: x-invalid-end-tag                              vue/no-parsing-error
+  364:13  error    Parsing error: x-invalid-end-tag                              vue/no-parsing-error
+  447:3   error    Parsing error: x-invalid-end-tag                              vue/no-parsing-error
+  750:7   warning  'hasDeliveryMarketing' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  837:7   warning  'toggleSubmenu' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  841:14  warning  'selectTenantAndNavigate' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  849:23  warning  'error' is defined but never used                             @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\layouts\KitchenLayout.vue
+  128:49  warning  'watch' is defined but never used            @typescript-eslint/no-unused-vars
+  135:7   warning  'router' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\layouts\TenantLayout.vue
+  884:18  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  890:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  908:18  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  914:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\main.ts
+  21:7  warning  'originalLog' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\router\index.ts
+  7:7  warning  'getLayoutForRole' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\utils\export-templates.ts
+    1:38  warning  'formatDateTime' is defined but never used  @typescript-eslint/no-unused-vars
+  156:14  warning  'requestError' is defined but never used    @typescript-eslint/no-unused-vars
+  163:12  warning  'error' is defined but never used           @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\utils\exportUtils.ts
+  53:24  warning  'i' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\utils\flexbox-export.ts
+  1:38  warning  'formatDateTime' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\utils\formatters.ts
+  10:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  21:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\utils\receipt-template-styles.ts
+  81:62  warning  'styles' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\utils\report-templates.ts
+   69:11  warning  'tenants' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  196:11  warning  'tenants' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  332:11  warning  'tenants' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  469:11  warning  'tenants' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  602:11  warning  'tenants' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\addons\Addons.vue
+  215:27  warning  'ensureArray' is defined but never used                                  @typescript-eslint/no-unused-vars
+  215:40  warning  'safeSome' is defined but never used                                     @typescript-eslint/no-unused-vars
+  215:62  warning  'safeMap' is defined but never used                                      @typescript-eslint/no-unused-vars
+  306:7   warning  'isAddonActive' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  344:46  warning  'addon' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\analytics\AdvancedAnalytics.vue
+  368:55  warning  'showInfo' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\auth\Login.vue
+  356:30  warning  'storeId' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\cashier\CashShift.vue
+  1190:7  warning  'changeHistoryPage' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\cashier\OpenShift.vue
+  422:7   warning  'getShiftLabel' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  476:22  warning  'e' is defined but never used                       @typescript-eslint/no-unused-vars
+  488:18  warning  'e' is defined but never used                       @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\dashboard\Dashboard.vue
+  240:7  warning  'route' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  242:9  warning  'showNotification' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\discounts\Discounts.vue
+  634:7  warning  'handleProductSelectionTypeChange' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\finance\ProfitLossReport.vue
+  217:7  warning  'authStore' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\inventory\RestockSuggestions.vue
+  248:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\inventory\StockTransfers.vue
+  387:26  warning  'computed' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\kitchen\KitchenOrders.vue
+  197:49  warning  'watch' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\marketing\Contact.vue
+  173:18  warning  'showSuccess' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\marketing\Pricing.vue
+  262:10  warning  'ref' is defined but never used       @typescript-eslint/no-unused-vars
+  262:15  warning  'computed' is defined but never used  @typescript-eslint/no-unused-vars
+  264:8   warning  'api' is defined but never used       @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\orders\Orders.vue
+  1195:2  error  Parsing error: Declaration or statement expected
+
+F:\Backup W11\Project\New-Warungin\client\src\views\pos\POS.vue
+  2456:2  error  Parsing error: Declaration or statement expected
+
+F:\Backup W11\Project\New-Warungin\client\src\views\products\Products.vue
+   659:14  warning  'e' is defined but never used                         @typescript-eslint/no-unused-vars
+   714:11  warning  'oldStock' is assigned a value but never used         @typescript-eslint/no-unused-vars
+   922:11  warning  'requiredHeaders' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  1092:7   warning  'calculateMargin' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\reports\GlobalReports.vue
+  593:26  warning  'formatDate' is defined but never used                            @typescript-eslint/no-unused-vars
+  639:7   warning  'showAddAdminModal' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  640:7   warning  'addAdminForm' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  641:7   warning  'tenants' is assigned a value but never used                      @typescript-eslint/no-unused-vars
+  717:7   warning  'deleteSubscription' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  807:7   warning  'deleteAddon' is assigned a value but never used                  @typescript-eslint/no-unused-vars
+  843:7   warning  'saveSubscriptionPurchasedBy' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  851:12  warning  'error' is defined but never used                                 @typescript-eslint/no-unused-vars
+  856:7   warning  'saveAddonPurchasedBy' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  864:12  warning  'error' is defined but never used                                 @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\reports\Reports.vue
+  732:51  warning  'index' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\rewards\Rewards.vue
+  291:10  warning  'useAuthStore' is defined but never used                     @typescript-eslint/no-unused-vars
+  476:7   warning  'getDaysUntilExpiration' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\settings\Preferences.vue
+  104:25  warning  'watch' is defined but never used      @typescript-eslint/no-unused-vars
+  104:32  warning  'onMounted' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\settings\RetentionManagement.vue
+  441:9   warning  'needsTenantSelection' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  442:58  warning  'showConfirm' is assigned a value but never used           @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\settings\SubscriptionPlans.vue
+  324:7  warning  'router' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\settings\TwoFactorAuth.vue
+  241:18  warning  'error' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\settings\WebhookTester.vue
+  373:12  warning  'e' is defined but never used      @typescript-eslint/no-unused-vars
+  440:16  warning  'e' is defined but never used      @typescript-eslint/no-unused-vars
+  478:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\stores\StoreDetail.vue
+  230:7  warning  'authStore' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\stores\Stores.vue
+  429:7  warning  'editStore' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\superadmin\BackupManagement.vue
+  383:11  warning  'errorMessage' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\superadmin\ContactMessages.vue
+  429:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  441:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  456:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  495:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\superadmin\ServerMonitor.vue
+  596:12  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+  608:12  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\superadmin\SuperDashboard.vue
+  349:7  warning  'getDateRangeLabel' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  366:7  warning  'getPlanPrice' is assigned a value but never used                @typescript-eslint/no-unused-vars
+  375:7  warning  'getSubscriptionStatusClass' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\tenants\TenantDetail.vue
+  314:45  error    This 'v-if' should be moved to the wrapper element                       vue/no-use-v-if-with-v-for
+  428:36  warning  'watch' is defined but never used                                        @typescript-eslint/no-unused-vars
+  437:7   warning  'authStore' is assigned a value but never used                           @typescript-eslint/no-unused-vars
+  438:18  warning  'showSuccess' is assigned a value but never used                         @typescript-eslint/no-unused-vars
+  438:38  warning  'showError' is assigned a value but never used                           @typescript-eslint/no-unused-vars
+  438:58  warning  'showConfirm' is assigned a value but never used                         @typescript-eslint/no-unused-vars
+  449:7   warning  'tenantPoints' is assigned a value but never used                        @typescript-eslint/no-unused-vars
+  452:7   warning  'pointTransactions' is assigned a value but never used                   @typescript-eslint/no-unused-vars
+  461:7   warning  'showCreateUserModal' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  462:7   warning  'showCreateStoreModal' is assigned a value but never used                @typescript-eslint/no-unused-vars
+  464:7   warning  'selectedAddonCategory' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  484:7   warning  'userUsage' is assigned a value but never used                           @typescript-eslint/no-unused-vars
+  501:7   warning  'filteredAvailableAddons' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  503:7   warning  'loadingPoints' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  504:7   warning  'loadingStores' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  565:23  warning  'addon' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  567:7   warning  'getAvailableAddonIcon' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  567:32  warning  'addon' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  570:22  warning  'addon' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  571:7   warning  'unsubscribeAddon' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  571:27  warning  'addon' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  572:7   warning  'subscribeAddon' is assigned a value but never used                      @typescript-eslint/no-unused-vars
+  572:25  warning  'addon' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  573:7   warning  'editUser' is assigned a value but never used                            @typescript-eslint/no-unused-vars
+  573:19  warning  'user' is defined but never used. Allowed unused args must match /^_/u   @typescript-eslint/no-unused-vars
+  574:7   warning  'editStore' is assigned a value but never used                           @typescript-eslint/no-unused-vars
+  574:20  warning  'store' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  575:7   warning  'openCreateStoreModal' is assigned a value but never used                @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\tenants\components\TenantProducts.vue
+  197:14  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+F:\Backup W11\Project\New-Warungin\client\src\views\users\Users.vue
+  238:14  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 148 problems (7 errors, 141 warnings)
+

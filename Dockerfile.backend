@@ -1,0 +1,86 @@
+# NestJS Backend Dockerfile
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Harden npm network behavior for remote builders like Coolify.
+RUN npm config set fetch-timeout 600000 && \
+    npm config set fetch-retries 8 && \
+    npm config set fetch-retry-mintimeout 20000 && \
+    npm config set fetch-retry-maxtimeout 180000
+
+# Copy NestJS package files
+COPY nest/package*.json ./nest/
+
+WORKDIR /app/nest
+
+# Install dependencies
+RUN npm ci --legacy-peer-deps --ignore-engines || npm install --legacy-peer-deps --ignore-engines
+
+# Copy source code
+COPY nest/tsconfig.json /app/nest/tsconfig.json
+COPY nest/nest-cli.json /app/nest/nest-cli.json
+RUN ls -la /app/nest
+COPY nest/src ./src
+COPY prisma /app/prisma
+
+# Generate Prisma client
+RUN npx prisma generate --schema=../prisma/schema.prisma
+
+# Build NestJS
+RUN npm run build
+
+# Production stage
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Install runtime dependencies
+RUN apk add --no-cache dumb-init wget
+
+# Match the builder retry profile so production dependency install is resilient too.
+RUN npm config set fetch-timeout 600000 && \
+    npm config set fetch-retries 8 && \
+    npm config set fetch-retry-mintimeout 20000 && \
+    npm config set fetch-retry-maxtimeout 180000
+
+# Copy package files from builder
+COPY nest/package*.json ./nest/
+
+WORKDIR /app/nest
+
+# Install production dependencies
+RUN npm ci --omit=dev --legacy-peer-deps --ignore-engines || npm install --omit=dev --legacy-peer-deps --ignore-engines
+
+# Bundle Prisma CLI into the runtime image so startup never relies on npx
+# downloading packages from the network.
+RUN npm install prisma@6.19.0 --no-save --legacy-peer-deps --ignore-engines
+
+# Copy built files
+COPY --from=builder /app/nest/dist ./dist
+COPY --from=builder /app/nest/node_modules/.prisma ./node_modules/.prisma
+COPY --from=builder /app/nest/node_modules/@prisma ./node_modules/@prisma
+COPY --from=builder /app/prisma ./prisma
+COPY scripts/docker-startup.sh ./scripts/docker-startup.sh
+COPY scripts/create-super-admin-docker.js ./scripts/create-super-admin-docker.js
+COPY scripts/seed-role-readiness-docker.js ./scripts/seed-role-readiness-docker.js
+
+# Copy generated Prisma client
+RUN mkdir -p src/generated/client && \
+    cp -r node_modules/.prisma/client src/generated/client 2>/dev/null || true
+
+# Create logs directory
+RUN mkdir -p /app/logs && \
+    sed -i 's/\r$//' ./scripts/docker-startup.sh ./scripts/create-super-admin-docker.js ./scripts/seed-role-readiness-docker.js && \
+    chmod +x ./scripts/docker-startup.sh
+
+# Non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001 -G nodejs || true
+
+USER nodejs
+
+EXPOSE 3000
+
+ENTRYPOINT ["dumb-init", "--"]
+CMD ["node", "dist/main.js"]
