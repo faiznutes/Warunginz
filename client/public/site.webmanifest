@@ -1,0 +1,51 @@
+{
+  "name": "Warungin - Sistem Kasir Modern untuk UMKM",
+  "short_name": "Warungin",
+  "description": "Sistem kasir modern untuk mengelola warung dan toko Anda",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#2563EB",
+  "background_color": "#2563EB",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "/",
+  "prefer_related_applications": false,
+  "scope": "/",
+  "categories": ["business", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "POS",
+      "short_name": "POS",
+      "description": "Buka halaman kasir",
+      "url": "/pos",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Produk",
+      "short_name": "Produk",
+      "description": "Kelola produk",
+      "url": "/app/products",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}
+

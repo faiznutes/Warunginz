@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+#app-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+/* ===========================================
+   Mobile-Optimized Responsive Utilities
+   =========================================== */
+
+/* Base font size reduction for mobile */
+@media (max-width: 639px) {
+  html {
+    font-size: 14px;
+  }
+  
+  /* Tighter padding on mobile */
+  .p-6 { padding: 1rem !important; }
+  .p-8 { padding: 1.25rem !important; }
+  .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .py-6 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+  .gap-6 { gap: 1rem !important; }
+  .gap-4 { gap: 0.75rem !important; }
+  
+  /* Smaller fonts on mobile */
+  .text-3xl { font-size: 1.5rem !important; }
+  .text-2xl { font-size: 1.25rem !important; }
+  .text-xl { font-size: 1.125rem !important; }
+  .text-lg { font-size: 1rem !important; }
+  
+  /* Compact buttons/cards */
+  .rounded-2xl { border-radius: 0.75rem !important; }
+  .rounded-xl { border-radius: 0.625rem !important; }
+  
+  /* Hide on very small screens */
+  .hide-mobile { display: none !important; }
+}
+
+/* Tablet optimization */
+@media (min-width: 640px) and (max-width: 1023px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .p-8 { padding: 1.5rem !important; }
+}
+
+/* Custom scrollbar - thinner on mobile */
+@media (max-width: 639px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (pointer: coarse) {
+  button, .btn, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* POS-specific mobile fixes */
+@media (max-width: 639px) {
+  /* Product cards smaller padding */
+  .shadow-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Compact cart sidebar on mobile */
+  .h-\[40vh\] {
+    height: 35vh !important;
+  }
+}

@@ -1,0 +1,85 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+docs/
+README.md
+TODO*.md
+DOCKER*.md
+
+# Node modules (will be installed in container)
+node_modules/
+client/node_modules/
+
+# Build outputs
+dist/
+build/
+*.log
+logs/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+tests/
+*.test.ts
+*.test.js
+*.spec.ts
+*.spec.js
+coverage/
+
+# Scripts (keep only docker-startup.sh)
+scripts/*.js
+scripts/*.ts
+!scripts/docker-startup.sh
+!scripts/create-super-admin-docker.js
+!scripts/seed-role-readiness-docker.js
+
+# Development files
+.vitest/
+vitest.config.ts
+tsconfig.json
+!tsconfig.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Docker files (don't copy into image)
+docker-compose*.yml
+Dockerfile*
+.dockerignore
+
+# Monitoring (not needed in backend image)
+monitoring/
+
+# Client (separate build)
+client/
+
+# Backup files
+backups/
+*.backup
+*.bak
+
+# Other
+*.ps1
+*.sh
+!scripts/docker-startup.sh
+
